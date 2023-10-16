@@ -1,0 +1,42 @@
+# Ignored files and directories
+target/
+*.class
+*.war
+*.jar
+*.ear
+
+# Maven
+/.repository/
+/.idea/
+/maven-wrapper.jar
+/MavenWrapperDownloader/
+mvnw
+mvnw.cmd
+
+# Gradle
+/.gradle/
+/build/
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Intellij
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+*.class
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+nbdist/
+/nbactions.xml
