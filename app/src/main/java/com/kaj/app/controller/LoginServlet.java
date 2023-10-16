@@ -1,9 +1,8 @@
 package com.kaj.app.controller;
 
 import java.io.IOException;
-
-import com.kaj.app.dao.UserDAO;
 import com.kaj.app.entity.User;
+import com.kaj.app.service.UserService;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
@@ -40,7 +39,7 @@ public class LoginServlet extends HttpServlet {
         System.out.println(username + " - " + password);
         
         // username is "email"
-        User user = UserDAO.login(username, password);
+        User user = UserService.login(username, password);
         if (user == null) {
             req.setAttribute("loginError", "Username or password is incorrect");
             req.getRequestDispatcher("login.jsp").forward(req, res);

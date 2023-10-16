@@ -1,4 +1,4 @@
-package com.kaj.app.service;
+package com.kaj.app.dao;
 
 public interface Repository<T, ID>{
     T save(T entity);

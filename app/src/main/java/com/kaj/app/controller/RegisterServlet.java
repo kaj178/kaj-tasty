@@ -2,8 +2,8 @@ package com.kaj.app.controller;
 
 import java.io.IOException;
 
-import com.kaj.app.dao.UserDAO;
 import com.kaj.app.entity.User;
+import com.kaj.app.service.UserService;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -36,7 +36,7 @@ public class RegisterServlet extends HttpServlet {
             req.getRequestDispatcher("register.jsp").forward(req, res);
         } 
         else {
-            User user = UserDAO.register(fullname, email, password);
+            User user = UserService.register(fullname, email, password);
             if (user == null) {
                 req.setAttribute("registerError", "Username or email already exists");
                 req.getRequestDispatcher("register.jsp").forward(req, res);

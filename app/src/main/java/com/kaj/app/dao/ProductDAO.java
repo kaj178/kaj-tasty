@@ -1,11 +1,11 @@
-package com.kaj.app.service;
+package com.kaj.app.dao;
 
 import org.hibernate.Session;
 
 import com.kaj.app.entity.Product;
 import com.kaj.util.HibernateUtil;
 
-public class ProductService implements Repository<Product, Integer> {
+public class ProductDAO implements Repository<Product, Integer> {
     private static final Session session = HibernateUtil.getFactory().openSession();
 
     @Override

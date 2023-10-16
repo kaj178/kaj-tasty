@@ -8,12 +8,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import com.kaj.app.dao.ProductDAO;
 import com.kaj.app.entity.Product;
-import com.kaj.app.service.ProductService;
 
 // @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
-    private static final ProductService productService = new ProductService();
+    private static final ProductDAO productService = new ProductDAO();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
